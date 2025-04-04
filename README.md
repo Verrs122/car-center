@@ -9,7 +9,8 @@
 
 ERD-диаграмма:
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/8e038923-c823-4a18-820a-b196d27eff0e)
+
 
 
 
