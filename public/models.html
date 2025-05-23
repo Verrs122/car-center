@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&subset=cyrillic&display=swap" rel="stylesheet">
+    <title>Автоцентр - Модели</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Логотип" />
+        </a>
+        <nav>
+            <a href="about.html" class="nav-link">О нас</a>
+            <a href="models.html" class="nav-link active">Модели</a>
+            <a href="test-drive.html" class="nav-link">Тест-драйв</a>
+            <a href="service.html" class="nav-link">Сервис</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="model-wrapper">
+            <div class="model-container">
+                <button class="arrow left-arrow" aria-label="Предыдущая модель">&#10094;</button>
+                <div class="model-card">
+                    <div class="image-container">
+                        <img id="car-image" src="" alt="Модель автомобиля">
+                    </div>
+                </div>
+                <button class="arrow right-arrow" aria-label="Следующая модель">&#10095;</button>
+            </div>
+
+            <div class="info-container">
+                <div class="info-left">
+                    <h2 id="model-name"></h2>
+                    <p id="model-description"></p>
+                </div>
+                <div class="info-right">
+                    <p id="model-price"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Автоцентр. Все права защищены.</p>
+    </footer>
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', async () => {
+    try {
+      const response = await fetch('/models');
+      if (!response.ok) throw new Error('Ошибка сервера: ' + response.status);
+      
+      const models = await response.json();
+      if (!models.length) throw new Error('Нет данных о моделях');
+
+      let currentIndex = 0;
+      const updateModel = (index) => {
+        const model = models[index];
+        document.getElementById('model-name').textContent = model.name;
+        document.getElementById('model-description').textContent = model.characteristics;
+        document.getElementById('model-price').textContent = `Цена: ${model.price} руб.`;
+        document.getElementById('car-image').src = `/images/${model.image_path}`;
+      };
+
+      // Кнопки переключения
+      document.querySelector('.left-arrow').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + models.length) % models.length;
+        updateModel(currentIndex);
+      });
+
+      document.querySelector('.right-arrow').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % models.length;
+        updateModel(currentIndex);
+      });
+
+      // Первая загрузка
+      updateModel(0);
+
+    
+      
+      } catch (error) {
+      console.error('Ошибка:', error);
+      alert('Нам удалось загрузить модели!');
+    }
+  });
+
+</script>
+
+</body>
+</html>

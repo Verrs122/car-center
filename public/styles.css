@@ -1,0 +1,399 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+}
+
+body.test-drive {
+  background: url('images/back.png') no-repeat center center/cover;
+}
+
+body.service {
+  background: url('images/back.png') no-repeat center center/cover;
+}
+
+body.about {
+  animation: gradientBG 10s ease infinite;
+  background: linear-gradient(-45deg, #ffffff, #dfe4f1, #ffffff, #d8e7ee);
+  background-size: 400% 400%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 0;
+}
+
+.logo {
+    height: 100px;
+    width: 150px;
+    margin-left: 35px;
+}
+
+.logo img {
+    height: 100px;
+    width: 150px 
+    
+}
+
+nav {
+    display: flex;
+}
+
+.nav-link, nav a {
+    text-decoration: none;
+    color: black; /* Цвет текста для ссылок */
+    padding: 30px;
+    transition: font-weight 0.3s;
+    font-size: 22px;
+    margin-right: 35px;
+}
+
+.nav-link:hover, .nav-link.active, nav a.active {
+    font-weight: bold;
+    color: black;
+}
+
+main {  
+    display: flex;
+    margin-top: 20px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+.content h1 {
+    font-size: 90px;
+}
+
+.content p {
+    font-size: 28px;
+}
+
+.image-container {
+    width: 50%;
+}
+
+.gradient-background {
+    background: linear-gradient(to bottom, #E3EBFF, #434B5E);
+    width: 300px;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px;
+}
+
+.car-image {
+    width: 940px;
+    height: 750px;
+    margin-right: 190px;
+}
+
+ /* для страницы О нас */
+
+.about-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    width: 1735px; /* Занять всю ширину родителя */
+    height: 400px; /* Соотношение сторон */
+}
+
+.about-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 32px;
+    width: 100%;
+}
+
+h2 {
+    margin-top: 30px;
+    font-size: 38px;
+}
+
+.reasons-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left; /* Выравнивание списка влево */
+    margin: 20px auto; /* Центрирование списка */
+    max-width: 600px; /* Ограничение ширины списка */
+    font-size: 32px; /* Увеличиваем размер шрифта */
+    width: 100%; /* Ширина 100% */
+    max-width: 1000px; /* Максимальная ширина для лучшего контроля */
+    font-size: 36px;
+}
+
+.reasons-list li {
+    margin-bottom: 10px; /* Отступ между пунктами списка */
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 28px; /* Уменьшенный размер шрифта */
+}
+
+footer {
+    background-color: #ffffff79; /* Цвет фона */
+    padding: 20px; /* Отступы */
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between; /* Размещаем элементы по краям */
+    align-items: center; /* Выравниваем по центру по вертикали */
+    gap: 200px; /* Расстояние между элементами */
+}
+
+.support, .email {
+    transition: font-weight 0.3s, color 0.3s; /* Плавный переход для изменения стиля */
+}
+
+.support:hover, .email:hover {
+    font-weight: bold; /* Жирный текст при наведении */
+    color: black;
+}
+
+.contacts span {
+    color: #333;
+}
+
+ /* для страницы Модели */
+
+.model-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.model-card {
+    display: flex;
+    justify-content: center; /* Центрирование содержимого */
+    align-items: center; /* Центрирование содержимого */
+    background: linear-gradient(to bottom, #434B5E, #E6E6E6, #434B5E);
+    padding:10px; /* Отступы внутри карточки */
+    width: 1675px;
+    height: 500px; /* Установите фиксированную высоту */
+    overflow: hidden; /* Скрываем переполнение, если изображение не помещается */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Центрирование изображения */
+}
+
+.model-card img {
+    max-width: 100%;
+    height: auto; /* Автоматическая высота */
+}
+
+.arrow {
+    background-color: transparent;
+    border: none;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    color: #626569; /* Цвет при наведении на стрелку */
+}
+
+.info-container {
+    text-align: center; /* Центрирование текста */
+    padding: 0 20px;
+    margin-top: 10px; /* Увеличиваем отступ сверху */
+    width: 100%; /* Задаем ширину 100% */
+}
+
+.info-left {
+    text-align: left;
+    font-size: 22px
+}
+
+.info-right {
+    text-align: right;
+    white-space: nowrap; /* Чтобы цена не переносилась */
+    font-size: 28px; 
+    font-weight: 700; 
+}
+.model-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer {
+    text-align: center; /* Центрирование текста */
+    padding: 35px; /* Уменьшите внутренние отступы */
+    margin: 0; /* Убедитесь, что нет внешних отступов */
+    background-color: #ffffff; /* Фоновый цвет для футера (по желанию) */
+    color: #333;
+}
+
+/* Стили для формы тест-драйва */
+
+.test-drive-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-top: 105px;
+    margin-bottom: 75px;
+}
+
+.test-drive-form h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #34495e;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.submit-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    text-align: center; /* Центрирование текста */
+    padding: 35px; /* Уменьшите внутренние отступы */
+    margin: 0; /* Убедитесь, что нет внешних отступов */
+    background-color: #ffffff; /* Фоновый цвет для футера (по желанию) */
+    color: #333;
+    
+}
+
+/* Стили для страницы сервиса */
+
+.service-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.service-form-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-top: 85px;
+    margin-bottom: 35px;
+    padding-top: 10px;
+}
+
+.form-description h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.form-description p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    
+}
+
+.service-form .form-group {
+    margin-bottom: 20px;
+}
+
+.service-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.service-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit-btn {
+    background: #007bff;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #0056b3;
+}
+
+footer {
+    text-align: center; /* Центрирование текста */
+    padding: 35px; /* Уменьшите внутренние отступы */
+    margin: 0; /* Убедитесь, что нет внешних отступов */
+    background-color: #ffffff00; /* Фоновый цвет прозрачный */
+    color: #000000d3;
+}

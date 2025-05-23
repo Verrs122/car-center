@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&subset=cyrillic&display=swap" rel="stylesheet">
+    <title>Автоцентр - Сервис</title>
+</head>
+<body class="service">
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Логотип" />
+        </a>
+        <nav>
+            <a href="about.html" class="nav-link">О нас</a>
+            <a href="models.html" class="nav-link">Модели</a>
+            <a href="test-drive.html" class="nav-link">Тест-драйв</a>
+            <a href="service.html" class="nav-link active">Сервис</a>
+        </nav>
+    </header>
+
+    <main class="service-main">
+        <section class="service-content"> 
+            <div class="service-form-container">
+                <div class="form-description">
+                    <h2>Записаться на сервис</h2>
+                    <p>Заполните простую форму на нашем сайте, и мы свяжемся с вами для подтверждения записи. Заботьтесь о своем автомобиле — доверьте его профессионалам!</p>
+                </div>
+
+                <form id="serviceForm" class="service-form">
+                    <div class="form-group">
+                        <label for="name">ИМЯ</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="model">МОДЕЛЬ</label>
+                        <input type="text" id="model" name="model" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">ДАТА</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">ЭЛЕКТРОННАЯ ПОЧТА</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">ОТПРАВИТЬ</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Автоцентр. Все права защищены.</p>
+    </footer>
+</body>
+</html>
